@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CognifyX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html" class="logo"><span>CognifyX</span></a>
+  </div>
+  <div class="cta-buttons">
+    <a href="signin.html" class="signin-btn">Sign In</a>
+    <a href="signup.html" class="signup-btn">Get Started</a>
+  </div>
+
+</header>
+
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+<div id="sideMenu" class="side-menu">
+
+  <div class="menu-header">
+    <h3>CognifyX</h3>
+    <span onclick="toggleMenu()">✕</span>
+  </div>
+
+  <ul class="menu-links">
+    <li onclick="goToDashboard()">📊 Dashboard</li>
+    <li onclick="goToResume()">📄 Resume Builder</li>
+    <li onclick="goToProgress()">📈 Track Progress</li>
+    <li onclick="goToXP()">⚡ Track XP</li>
+    <li onclick="goToStreaks()">🔥 Streaks</li>
+    <li onclick="goToSkills()">🧠 Skill Proficiency</li>
+    <li onclick="goToAnalytics()">📊 Real-time Analytics</li>
+  </ul>
+
+  <div class="goal-box">
+    <h4>🎯 Build My Roadmap</h4>
+    <input type="text" id="goalInput" placeholder="Your goal (e.g. AI, Web Dev)">
+    <input type="number" id="timeInput" placeholder="Hours/day">
+    <button class="primary" onclick="generateFromMenu()">Generate</button>
+  </div>
+
+</div>
+
+<div id="overlay" onclick="toggleMenu()"></div>
+
+<section class="hero">
+  <span class="badge">AI-Powered Learning Revolution</span>
+
+  <h1>
+    Master Any Skill with <br />
+    <span>Intelligent Guidance</span>
+  </h1>
+
+  <p>
+    Personalized roadmaps, AI mentorship, and adaptive courses designed
+    to accelerate your growth 10× faster than traditional learning.
+  </p>
+
+  <div class="cta-buttons">
+    <a href="generate-roadmap.html" class="primary">Generate Roadmap</a>
+    <a href="explore.html" class="secondary">Explore Courses</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature-card">
+    <div class="icon">🧠</div>
+    <h3>AI Path Generator</h3>
+    <p>
+      Input your goal and available time. We build a custom curriculum instantly.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">📊</div>
+    <h3>Adaptive Dashboard</h3>
+    <p>
+      Track XP, streaks, and skill proficiency with real-time analytics.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">🚀</div>
+    <h3>Career Acceleration</h3>
+    <p>
+      Project-based learning that builds a portfolio ready for employers.
+    </p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

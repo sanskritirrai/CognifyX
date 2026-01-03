@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CognifyX | Explore Courses</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo"><span>CognifyX</span></a>
+  <a href="signin.html" class="signin-btn">Sign In</a>
+</header>
+
+<section class="explore-hero">
+  <h1>Explore Courses</h1>
+  <p>Skill-focused courses designed for real-world impact</p>
+</section>
+
+<section class="filters">
+  <button class="filter active" onclick="filterCourses('all')">All</button>
+  <button class="filter" onclick="filterCourses('beginner')">Beginner</button>
+  <button class="filter" onclick="filterCourses('intermediate')">Intermediate</button>
+  <button class="filter" onclick="filterCourses('advanced')">Advanced</button>
+</section>
+
+<section class="courses-grid">
+
+  <div class="course-card" data-level="beginner">
+    <h3>Python for Beginners</h3>
+    <p class="level">Beginner • 4 Weeks</p>
+    <p class="desc">
+      Learn Python from scratch with hands-on exercises and mini projects.
+    </p>
+    <ul>
+      <li>Variables & Loops</li>
+      <li>Functions</li>
+      <li>Basic Projects</li>
+    </ul>
+    <button class="secondary">View Course</button>
+  </div>
+
+  <div class="course-card" data-level="beginner">
+    <h3>Web Development Fundamentals</h3>
+    <p class="level">Beginner • 5 Weeks</p>
+    <p class="desc">
+      Build responsive websites using HTML, CSS, and JavaScript.
+    </p>
+    <ul>
+      <li>HTML & CSS</li>
+      <li>JavaScript Basics</li>
+      <li>Landing Pages</li>
+    </ul>
+    <button class="secondary">View Course</button>
+  </div>
+
+  <div class="course-card" data-level="intermediate">
+    <h3>JavaScript Deep Dive</h3>
+    <p class="level">Intermediate • 6 Weeks</p>
+    <p class="desc">
+      Master modern JavaScript concepts used in real applications.
+    </p>
+    <ul>
+      <li>DOM & Events</li>
+      <li>Async JS</li>
+      <li>APIs</li>
+    </ul>
+    <button class="secondary">View Course</button>
+  </div>
+
+  <div class="course-card" data-level="intermediate">
+    <h3>React for Developers</h3>
+    <p class="level">Intermediate • 6 Weeks</p>
+    <p class="desc">
+      Build fast, scalable frontends using React.
+    </p>
+    <ul>
+      <li>Components</li>
+      <li>Hooks</li>
+      <li>Project Build</li>
+    </ul>
+    <button class="secondary">View Course</button>
+  </div>
+
+  <div class="course-card" data-level="advanced">
+    <h3>AI & Machine Learning</h3>
+    <p class="level">Advanced • 8 Weeks</p>
+    <p class="desc">
+      Learn how to build intelligent systems using ML algorithms.
+    </p>
+    <ul>
+      <li>ML Models</li>
+      <li>Data Handling</li>
+      <li>AI Projects</li>
+    </ul>
+    <button class="secondary">View Course</button>
+  </div>
+
+  <div class="course-card" data-level="advanced">
+    <h3>Full Stack Development</h3>
+    <p class="level">Advanced • 10 Weeks</p>
+    <p class="desc">
+      Become job-ready by building full-stack applications.
+    </p>
+    <ul>
+      <li>Frontend + Backend</li>
+      <li>Databases</li>
+      <li>Deployment</li>
+    </ul>
+    <button class="secondary">View Course</button>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+
+<script>
+function filterCourses(level) {
+  const cards = document.querySelectorAll(".course-card");
+  const filters = document.querySelectorAll(".filter");
+
+  filters.forEach(btn => btn.classList.remove("active"));
+
+  event.target.classList.add("active");
+
+  cards.forEach(card => {
+    if (level === "all" || card.dataset.level === level) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
